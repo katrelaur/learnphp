@@ -24,3 +24,4 @@ var_dump($string);
 $hello = 'word is: $string';
 var_dump($hello);
 
+?>
