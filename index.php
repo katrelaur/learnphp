@@ -1,23 +1,16 @@
 <?php
+$name = 'Katre';
+$list = ['leib','sai','piim'];
+?>
+<?php include 'partials/header.php'?>
 
-$obj = new stdClass();
-$obj->name = "Kaspar";
-$obj->age = 30;
-var_dump($obj);
 
-fuction hello(){
-    echo"hello worldfffff";
-}
+<h1>Hello <?=$name?><h1>
+    <ul>
+        <?php foreach($list as $element): ?>
+            <li><?=$element?></li>
+            <?php endforeach; ?>
+        </ul>
+        <?php include 'partials/footer.php'?>
 
-hello();
-hello();
-hello();
-
-function sum($a, $b) {
-    return $a+$b;
-    echo"askdgal";
-}
-$answer = sum(1,2);
-var_damp($answer);
-var_damp(sum(3,5));
 
