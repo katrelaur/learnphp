@@ -16,7 +16,34 @@ class ArticlesController {
     }
 
     public function store(){
-        var_dump($_GET);
-        var_dump($_POST);
+        $article = new Article();
+        $article->title = $_POST['title'];
+        $article->body = $_POST['body'];
+        $article->save();
+        header('Location: /admin/articles');
+    }
+
+    public function show(){
+       $article = Article::find($_GET['id']);
+       include 'views/articles/show.php';
+    }
+
+    public function edit(){
+        $article = Article::find($_GET['id']);
+        include 'views/articles/edit.php';
+    }
+
+    public function update(){
+        $article = Article::find($_GET['id']);
+        $article->title = $_POST['title'];
+        $article->body = $_POST['body'];
+        $article->save();
+        header('Location: /admin/articles');
+    }
+
+    public function destroy(){
+        $article = Article::find($_GET['id']);
+        $article->delete();
+        header('Location: /admin/articles');
     }
 }
