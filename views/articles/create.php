@@ -10,7 +10,7 @@
             class="form-control"
             id="body"
             rows="3"
-            placeholder="Write something awesome..."
+            placeholder="Write something..."
             name="body"></textarea>
     </div>
     <input type="submit" class="btn btn-primary" value="Create">
