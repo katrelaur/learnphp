@@ -20,3 +20,10 @@ Router::post('/admin/articles', [ArticlesController::class, 'store']);
 Router::get('/admin/users', [UsersController::class, 'index']);
 Router::get('/admin/users/new', [UsersController::class, 'create']);
 Router::post('/admin/users', [UsersController::class, 'store']);
+
+Router::get('/admin/users/show', [UsersController::class, 'show']);
+
+Router::get('/admin/users/edit', [UsersController::class, 'edit']);
+Router::post('/admin/users/edit', [UsersController::class, 'update']);
+
+Router::post('/admin/users/delete', [UsersController::class, 'destroy']);
